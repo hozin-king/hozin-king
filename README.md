@@ -60,6 +60,16 @@ const hozin = {
 
 ---
 
+### 📋 Portofolio
+
+<p align="center">
+  <img src="github-metrics.svg" alt="Metrics" />
+</p>
+
+> Metrik oleh [lowlighter/metrics](https://github.com/lowlighter/metrics) — inspirasi desain: [Loukious](https://github.com/Loukious)
+
+---
+
 ### 🐍 Contribution RGB
 
 <p align="center">
