@@ -37,6 +37,7 @@ const hozin = {
 
 ### 🛠️ Featured Projects
 
+<!-- PROJECTS:START -->
 | Project | Description |
 |---|---|
 | 🎯 **UnityESP Injector** | Root ptrace injector for Unity IL2CPP games — auto ESP, skeleton, universal chams, in-game ImGui menu |
@@ -44,6 +45,7 @@ const hozin = {
 | 🎨 **HozinHDR** | HDR10 metadata injector for MP4 |
 | 📝 **Hozin Notes** | Lightweight super-notes app |
 | 🎮 **Tebak Gambar** | 60-stage offline guessing game |
+<!-- PROJECTS:END -->
 
 ---
 
@@ -77,6 +79,14 @@ const hozin = {
 </p>
 
 > Enable with [Platane/snk](https://github.com/Platane/snk) workflow — outputs `github-contribution-grid-snake-dark.svg`.
+
+---
+
+### 🧊 Contribution 3D
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
+</p>
 
 ---
 
