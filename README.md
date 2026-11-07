@@ -38,13 +38,16 @@ const hozin = {
 ### 🛠️ Featured Projects
 
 <!-- PROJECTS:START -->
-| Project | Description |
-|---|---|
-| 🎯 **UnityESP Injector** | Root ptrace injector for Unity IL2CPP games — auto ESP, skeleton, universal chams, in-game ImGui menu |
-| 🧱 **Hozin Module Builder** | Drag & drop visual block editor to build cheat modules — zero code |
-| 🎨 **HozinHDR** | HDR10 metadata injector for MP4 |
-| 📝 **Hozin Notes** | Lightweight super-notes app |
-| 🎮 **Tebak Gambar** | 60-stage offline guessing game |
+| Project | Description | ⭐ |
+|---|---|---|
+| **[hozin-news-getter](https://github.com/hozin-king/hozin-news-getter)** | Auto-polling berita Indonesia (RSS) — 2 getter sekuensial tiap 10 menit | ⭐ 0 |
+| **[hozin-news-moderator](https://github.com/hozin-king/hozin-news-moderator)** | Moderator otomatis berita Hozin AI Studio (jalan tiap 15 menit) | ⭐ 1 |
+| **[cctv-id-scraper](https://github.com/hozin-king/cctv-id-scraper)** | Scraper CCTV publik Indonesia -> cctv.json per wilayah (tiap 6 jam) | ⭐ 0 |
+| **[swarm-rebuild-bookmarklet](https://github.com/hozin-king/swarm-rebuild-bookmarklet)** | Bookmarklet Swarm Rebuild untuk Chrome Android — ubah halaman web jadi kanvas kosong lalu bangun kembali dengan kursor swarm. Versi bookmarklet dari ekstensi DhvanilPatel/swarm-cursors. | ⭐ 1 |
+| **[hozin-ai-debate](https://github.com/hozin-king/hozin-ai-debate)** | Debat AI Bumi Bulat vs Bumi Datar — giliran ketat, history tersimpan, digerakkan GitHub Actions | ⭐ 0 |
+| **[hozin-cms](https://github.com/hozin-king/hozin-cms)** | CMS Hozin - web post + komentar + tema + plugin di Cloudflare Workers + D1 | ⭐ 0 |
+| **[hozin-hacklab](https://github.com/hozin-king/hozin-hacklab)** | — | ⭐ 0 |
+| **[hozin-poolbilliards-mod](https://github.com/hozin-king/hozin-poolbilliards-mod)** | Mod gabung APK Pool Billiards Pro 5.3: long line, prediksi penuh (klon fisika game), auto play pintar — mati total di mode PvP | ⭐ 0 |
 <!-- PROJECTS:END -->
 
 ---
