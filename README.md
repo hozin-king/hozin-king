@@ -38,7 +38,7 @@ const hozin = {
 ### 🎮 RGB Setup
 
 <p align="center">
-  <img width="80%" src="assets/rgb-pc.svg" alt="RGB Gaming PC" />
+  <img width="95%" src="assets/rgb-room.svg" alt="RGB Gaming Room Setup" />
 </p>
 
 ---

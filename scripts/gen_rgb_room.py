@@ -1,0 +1,230 @@
+#!/usr/bin/env python3
+"""Generate assets/rgb-room.svg — a full RGB gaming room setup (animated SVG).
+
+Scene: wall with LED strip, night window, posters, shelf, desk with dual
+monitors (code + game), RGB keyboard, mouse, headphones, mug, plant,
+glass PC tower, gaming chair, rug. Fans spin, RGB hues cycle, code
+cursor blinks. Run: python3 scripts/gen_rgb_room.py
+"""
+import math
+
+
+def fan(cx, cy, r, dur, reverse=False):
+    blades = []
+    for i in range(7):
+        a = i * (360 / 7)
+        blades.append(
+            f'<path d="M0 0 C {r*0.28:.1f} {-r*0.55:.1f} {r*0.78:.1f} {-r*0.62:.1f} '
+            f'{r*0.92:.1f} {-r*0.18:.1f} C {r*0.72:.1f} {r*0.12:.1f} {r*0.3:.1f} {r*0.16:.1f} 0 0 Z" '
+            f'transform="rotate({a})" fill="url(#rgbGrad)" opacity="0.92"/>'
+        )
+    d = "reverse" if reverse else "normal"
+    return f"""
+<g transform="translate({cx} {cy})">
+  <circle r="{r}" fill="none" stroke="url(#rgbGrad)" stroke-width="3.5" class="rgb"/>
+  <circle r="{r - 7}" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g class="fan" style="animation-duration:{dur}s;animation-direction:{d}">{''.join(blades)}</g>
+  <circle r="{r * 0.26:.1f}" fill="#0d1117" stroke="#2b323d" stroke-width="1.5"/>
+  <circle r="2.5" fill="#00F0FF"/>
+</g>"""
+
+
+def code_lines(x, y, w):
+    """Fake code: colored bars + blinking cursor."""
+    colors = ["#00F0FF", "#FF00E5", "#00e676", "#ffee00", "#7b2fff", "#8b949e"]
+    rows = []
+    for i in range(7):
+        indent = (i % 3) * 12
+        cw = w - indent - (i * 13 % 60)
+        rows.append(
+            f'<rect x="{x + indent}" y="{y + i * 13}" width="{cw}" height="6" rx="3" '
+            f'fill="{colors[i % len(colors)]}" opacity="0.75"/>'
+        )
+    rows.append(
+        f'<rect class="blink" x="{x + 8}" y="{y + 7 * 13}" width="8" height="9" fill="#00F0FF"/>'
+    )
+    return "".join(rows)
+
+
+def keyboard(x, y, w):
+    keys = []
+    rows, cols = 3, 14
+    kw, kh, gap = 13, 11, 4
+    palette = ["#ff004c", "#ff8a00", "#ffee00", "#00e676", "#00cfff", "#7b2fff"]
+    for r in range(rows):
+        for c in range(cols):
+            kx = x + c * (kw + gap)
+            ky = y + r * (kh + gap)
+            col = palette[(r * cols + c) % len(palette)]
+            keys.append(
+                f'<rect x="{kx}" y="{ky}" width="{kw}" height="{kh}" rx="2.5" '
+                f'fill="{col}" opacity="0.85" class="rgb"/>'
+            )
+    return (
+        f'<rect x="{x - 8}" y="{y - 8}" width="{w + 16}" height="{rows * (kh + gap) + 10}" '
+        f'rx="8" fill="#14181f" stroke="#2b323d"/>' + "".join(keys)
+    )
+
+
+def main():
+    svg = """<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<defs>
+  <linearGradient id="rgbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#ff004c"/><stop offset="16%" stop-color="#ff8a00"/>
+    <stop offset="33%" stop-color="#ffee00"/><stop offset="50%" stop-color="#00e676"/>
+    <stop offset="66%" stop-color="#00cfff"/><stop offset="83%" stop-color="#7b2fff"/>
+    <stop offset="100%" stop-color="#ff004c"/>
+  </linearGradient>
+  <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#161c24"/><stop offset="100%" stop-color="#0b0e13"/>
+  </linearGradient>
+  <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2a1e12"/><stop offset="100%" stop-color="#171009"/>
+  </linearGradient>
+  <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4a3421"/><stop offset="100%" stop-color="#2e2013"/>
+  </linearGradient>
+  <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0a1626"/><stop offset="100%" stop-color="#12294d"/>
+  </linearGradient>
+  <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+  </radialGradient>
+  <style>
+    .fan{animation:spin 7s linear infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .rgb{animation:hue 6s linear infinite}
+    @keyframes hue{to{filter:hue-rotate(360deg)}}
+    .blink{animation:blink 1.1s steps(2) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .pulse{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.3}50%{opacity:.6}}
+  </style>
+</defs>
+<!-- wall + floor -->
+<rect x="0" y="0" width="900" height="400" fill="url(#wallGrad)"/>
+<rect x="0" y="400" width="900" height="160" fill="url(#floorGrad)"/>
+<rect x="0" y="396" width="900" height="8" fill="#05070a"/>
+<!-- LED strip on top of wall -->
+<rect x="0" y="0" width="900" height="8" fill="url(#rgbGrad)" class="rgb"/>
+<ellipse class="pulse" cx="450" cy="8" rx="430" ry="26" fill="url(#glowGrad)"/>
+<!-- window: night skyline -->
+<g>
+  <rect x="60" y="60" width="170" height="190" rx="6" fill="#0a1626" stroke="#2b323d" stroke-width="4"/>
+  <rect x="66" y="66" width="158" height="178" fill="url(#skyGrad)"/>
+  <circle cx="200" cy="95" r="14" fill="#f5f3ce" opacity="0.9"/>
+  <circle cx="90" cy="85" r="1.6" fill="#fff"/><circle cx="130" cy="105" r="1.4" fill="#fff"/>
+  <circle cx="165" cy="78" r="1.6" fill="#fff"/><circle cx="215" cy="125" r="1.4" fill="#fff"/>
+  <circle cx="105" cy="140" r="1.3" fill="#fff"/><circle cx="150" cy="150" r="1.5" fill="#fff"/>
+  <polygon points="66,244 66,190 96,190 96,170 120,170 120,205 150,205 150,180 185,180 185,215 224,215 224,244" fill="#05080d"/>
+  <rect x="80" y="200" width="6" height="6" fill="#ffee00" opacity="0.8"/>
+  <rect x="130" y="190" width="6" height="6" fill="#ffee00" opacity="0.7"/>
+  <rect x="160" y="200" width="6" height="6" fill="#00cfff" opacity="0.8"/>
+  <rect x="195" y="225" width="6" height="6" fill="#ffee00" opacity="0.6"/>
+  <line x1="145" y1="66" x2="145" y2="244" stroke="#2b323d" stroke-width="3"/>
+</g>
+<!-- posters -->
+<g>
+  <rect x="640" y="60" width="92" height="120" rx="4" fill="#10151c" stroke="#2b323d" stroke-width="3"/>
+  <circle cx="686" cy="105" r="26" fill="#ff8a00" opacity="0.9"/>
+  <rect x="652" y="118" width="68" height="5" fill="#ff004c" opacity="0.8"/>
+  <rect x="652" y="128" width="68" height="5" fill="#00cfff" opacity="0.8"/>
+  <rect x="652" y="138" width="68" height="5" fill="#7b2fff" opacity="0.8"/>
+  <rect x="748" y="60" width="92" height="120" rx="4" fill="#10151c" stroke="#2b323d" stroke-width="3"/>
+  <polygon points="760,168 790,105 815,150 828,125 828,168" fill="#00e676" opacity="0.55"/>
+  <circle cx="812" cy="92" r="12" fill="#f5f3ce" opacity="0.9"/>
+</g>
+<!-- shelf with books, plant, figure -->
+<g>
+  <rect x="600" y="252" width="250" height="8" rx="2" fill="#4a3421"/>
+  <rect x="615" y="260" width="8" height="18" fill="#2b323d"/>
+  <rect x="820" y="260" width="8" height="18" fill="#2b323d"/>
+  <rect x="620" y="212" width="12" height="40" fill="#ff004c" rx="2"/>
+  <rect x="634" y="212" width="12" height="40" fill="#00cfff" rx="2"/>
+  <rect x="648" y="212" width="12" height="40" fill="#ffee00" rx="2"/>
+  <rect x="700" y="228" width="22" height="24" rx="3" fill="#7b2fff"/>
+  <circle cx="711" cy="220" r="10" fill="#00e676"/>
+  <path d="M770 252 v-22 M770 232 q-12 -8 -18 2 M770 232 q12 -10 18 0" stroke="#00e676" stroke-width="3" fill="none"/>
+  <rect x="760" y="240" width="20" height="12" rx="2" fill="#ff8a00"/>
+</g>
+<!-- rug -->
+<ellipse cx="450" cy="530" rx="330" ry="24" fill="#12161d" stroke="#00F0FF" stroke-opacity="0.25" stroke-width="2"/>
+<!-- desk: slab with depth so gear sits ON it -->
+<polygon points="120,330 780,330 760,374 140,374" fill="url(#deskGrad)"/>
+<rect x="120" y="330" width="660" height="4" rx="2" fill="#6b4a2a" opacity="0.7"/>
+<rect x="140" y="374" width="14" height="146" fill="#241a10"/>
+<rect x="746" y="374" width="14" height="146" fill="#241a10"/>
+<ellipse class="pulse" cx="450" cy="378" rx="300" ry="10" fill="url(#glowGrad)"/>
+<!-- left monitor: code -->
+<g>
+  <rect x="215" y="188" width="210" height="128" rx="6" fill="#0a0d11" stroke="#2b323d" stroke-width="3"/>
+  <rect x="223" y="196" width="194" height="112" fill="#0d1117"/>
+  """ + code_lines(233, 206, 150) + """
+  <polygon points="305,316 335,316 328,332 312,332" fill="#2b323d"/>
+  <rect x="285" y="330" width="70" height="6" rx="3" fill="#2b323d"/>
+</g>
+<!-- right monitor: game -->
+<g>
+  <rect x="450" y="198" width="210" height="118" rx="6" fill="#0a0d11" stroke="#2b323d" stroke-width="3"/>
+  <rect x="458" y="206" width="194" height="102" fill="#0a1626"/>
+  <circle cx="610" cy="235" r="26" fill="url(#rgbGrad)" class="rgb" opacity="0.9"/>
+  <circle cx="610" cy="235" r="16" fill="#0a1626"/>
+  <polygon points="458,308 510,262 545,290 585,258 652,308" fill="#0e4429"/>
+  <rect x="458" y="300" width="194" height="8" fill="#006d32"/>
+  <polygon points="540,316 570,316 563,330 547,330" fill="#2b323d"/>
+  <rect x="520" y="330" width="70" height="6" rx="3" fill="#2b323d"/>
+</g>
+<!-- mousepad + keyboard + mouse -->
+<rect x="270" y="340" width="360" height="40" rx="8" fill="#10151c" stroke="url(#rgbGrad)" stroke-width="2" class="rgb"/>
+""" + keyboard(310, 348, 232) + """
+<ellipse cx="578" cy="362" rx="16" ry="11" fill="#1a212b" stroke="#2b323d"/>
+<rect x="570" y="350" width="16" height="5" rx="2" fill="url(#rgbGrad)" class="rgb"/>
+<!-- headphones on stand -->
+<g>
+  <rect x="648" y="330" width="6" height="22" fill="#2b323d"/>
+  <rect x="632" y="350" width="38" height="5" rx="2" fill="#2b323d"/>
+  <path d="M640 330 a11 11 0 0 1 22 0" fill="none" stroke="#00F0FF" stroke-width="4"/>
+  <rect x="636" y="328" width="8" height="14" rx="3" fill="#1a212b" stroke="#00F0FF" stroke-width="1.5"/>
+  <rect x="658" y="328" width="8" height="14" rx="3" fill="#1a212b" stroke="#00F0FF" stroke-width="1.5"/>
+</g>
+<!-- mug + desk plant -->
+<g>
+  <rect x="238" y="330" width="20" height="22" rx="3" fill="#ff004c"/>
+  <path d="M258 335 q10 5 0 12" fill="none" stroke="#ff004c" stroke-width="3"/>
+  <rect x="688" y="336" width="18" height="16" rx="2" fill="#ff8a00"/>
+  <path d="M697 336 q-10 -14 -16 -6 M697 336 q0 -16 8 -18 M697 336 q10 -12 16 -4" stroke="#00e676" stroke-width="3" fill="none"/>
+</g>
+<!-- PC tower on floor, right of desk -->
+<g>
+  <rect x="786" y="380" width="86" height="140" rx="6" fill="#14181f" stroke="#2b323d" stroke-width="2"/>
+  <rect x="786" y="380" width="5" height="140" fill="url(#rgbGrad)" class="rgb"/>
+  <rect x="800" y="392" width="60" height="116" rx="4" fill="#070a0e" stroke="url(#rgbGrad)" stroke-width="1.5" class="rgb"/>
+  """ + fan(830, 424, 15, 6) + fan(830, 470, 15, 7, reverse=True) + """
+  <rect x="806" y="492" width="48" height="10" rx="2" fill="#1a212b"/>
+  <rect x="806" y="492" width="48" height="3" rx="1" fill="url(#rgbGrad)" class="rgb"/>
+  <ellipse class="pulse" cx="829" cy="524" rx="52" ry="7" fill="url(#glowGrad)"/>
+</g>
+<!-- gaming chair (front) -->
+<g>
+  <ellipse cx="450" cy="550" rx="24" ry="6" fill="#0a0d11"/>
+  <circle cx="430" cy="550" r="5" fill="#1a212b" stroke="#2b323d"/>
+  <circle cx="470" cy="550" r="5" fill="#1a212b" stroke="#2b323d"/>
+  <rect x="445" y="508" width="10" height="38" fill="#1a212b"/>
+  <rect x="345" y="412" width="210" height="100" rx="24" fill="#171c22" stroke="#2b323d" stroke-width="2"/>
+  <rect x="361" y="424" width="178" height="76" rx="16" fill="none" stroke="#00F0FF" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="408" y="404" width="84" height="24" rx="10" fill="#1a212b" stroke="#00F0FF" stroke-opacity="0.5" stroke-width="2"/>
+  <rect x="333" y="460" width="14" height="42" rx="6" fill="#1a212b" stroke="#2b323d"/>
+  <rect x="553" y="460" width="14" height="42" rx="6" fill="#1a212b" stroke="#2b323d"/>
+</g>
+</svg>
+"""
+    import os
+    os.makedirs("assets", exist_ok=True)
+    with open("assets/rgb-room.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"wrote assets/rgb-room.svg ({len(svg)} bytes)")
+
+
+if __name__ == "__main__":
+    main()
