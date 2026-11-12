@@ -35,6 +35,14 @@ const hozin = {
 
 ---
 
+### 🎮 RGB Setup
+
+<p align="center">
+  <img width="80%" src="assets/rgb-pc.svg" alt="RGB Gaming PC" />
+</p>
+
+---
+
 ### 🛠️ Featured Projects
 
 <!-- PROJECTS:START -->
@@ -55,13 +63,15 @@ const hozin = {
 ### 📊 Stats
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=hozin-king&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F0FF&icon_color=FF00E5&text_color=ffffff" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hozin-king&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F0FF&text_color=ffffff" />
+  <img width="49%" src="stats.svg" alt="GitHub Stats" />
+  <img width="49%" src="top-langs.svg" alt="Most Used Languages" />
 </p>
 
 <p align="center">
   <img width="90%" src="https://github-readme-streak-stats.herokuapp.com/?user=hozin-king&theme=radical&hide_border=true&background=0D1117&stroke=00F0FF&ring=FF00E5&fire=FF00E5&currStreakLabel=00F0FF" />
 </p>
+
+> Kartu statistik di-generate sendiri tiap hari oleh GitHub Actions (`stats.yml`) — tanpa layanan luar.
 
 ---
 
@@ -81,7 +91,7 @@ const hozin = {
   <img src="https://raw.githubusercontent.com/hozin-king/hozin-king/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </p>
 
-> Enable with [Platane/snk](https://github.com/Platane/snk) workflow — outputs `github-contribution-grid-snake-dark.svg`.
+> Ular RGB oleh [Platane/snk](https://github.com/Platane/snk) + pewarna pelangi (`scripts/rgb_snake.py`) — output `github-contribution-grid-snake-dark.svg`.
 
 ---
 

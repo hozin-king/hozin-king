@@ -78,5 +78,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add github-metrics.svg .github/activity.log
-          git commit -it -m "chore: refresh activity metrics" || exit 0
+          git commit -m "chore: refresh activity metrics" || exit 0
           git push

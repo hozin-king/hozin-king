@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
       - uses: Platane/snk@v3
         with:
           github_user_name: hozin-king
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00F0FF&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+      # RGB: gradient pelangi mengalir di kepala ular + sel yang dimakan
+      # jadi skala panas pelangi (scripts/rgb_snake.py).
+      - name: RGB-ify snake
+        run: python3 scripts/rgb_snake.py dist/github-contribution-grid-snake-dark.svg
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
