@@ -37,6 +37,10 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
 
+      # Reactions row -> iOS frosted glass orbs, fully animated.
+      - name: Glass reactions
+        run: python3 scripts/glass_reactions.py github-metrics.svg
+
       - name: Asset Optimization Check & Print
         run: |
           python - << 'EOF'
