@@ -48,14 +48,14 @@ const hozin = {
 <!-- PROJECTS:START -->
 | Project | Description | ⭐ |
 |---|---|---|
-| **[nama-repo](https://github.com/hozin-king/nama-repo)** | — | ⭐ 0 |
-| **[hasil-dump](https://github.com/hozin-king/hasil-dump)** | Arsip dump full + REA (reverse engineering) — per package / versi / arsitektur | ⭐ 0 |
+| **[hozin-web2apk](https://github.com/hozin-king/hozin-web2apk)** | Hozin Web2APK - builder HTML drag-and-drop + konverter website/HTML ke APK (backend GitHub Actions) | ⭐ 0 |
+| **[hozin-city](https://github.com/hozin-king/hozin-city)** | Hozin City — mini open-world 3D ala GTA SA (libGDX, native Android) | ⭐ 0 |
+| **[shredder-press-sim](https://github.com/hozin-king/shredder-press-sim)** | Simulator mesin shredder + hydraulic press (libGDX + fisika Bullet) — hancurkan 6 barang | ⭐ 0 |
+| **[gear-tower-sim](https://github.com/hozin-king/gear-tower-sim)** | Simulasi menara gear 1000 (libGDX) — putar bolak-balik | ⭐ 0 |
+| **[unity-controller-v2](https://github.com/hozin-king/unity-controller-v2)** | Generic Unity ImGui mod-menu framework (NepMods/Aide-ImGui fork) — being converted to root injector mode | ⭐ 0 |
 | **[FF-Max](https://github.com/hozin-king/FF-Max)** | — | ⭐ 0 |
-| **[cerpen-hozin](https://github.com/hozin-king/cerpen-hozin)** | Aplikasi Cerpen Hozin — baca cerpen offline: 52+ cerpen original Bahasa Indonesia, 10 komik, sistem season & episode, lanjutkan membaca, berita teknologi offline. | ⭐ 0 |
-| **[hozin-news-getter](https://github.com/hozin-king/hozin-news-getter)** | Auto-polling berita Indonesia (RSS) — 2 getter sekuensial tiap 10 menit | ⭐ 0 |
-| **[hozin-cms](https://github.com/hozin-king/hozin-cms)** | CMS Hozin - web post + komentar + tema + plugin di Cloudflare Workers + D1 | ⭐ 0 |
-| **[hozin-news-moderator](https://github.com/hozin-king/hozin-news-moderator)** | Moderator otomatis berita Hozin AI Studio (jalan tiap 15 menit) | ⭐ 1 |
-| **[cctv-id-scraper](https://github.com/hozin-king/cctv-id-scraper)** | Scraper CCTV publik Indonesia -> cctv.json per wilayah (tiap 6 jam) | ⭐ 0 |
+| **[root-injector](https://github.com/hozin-king/root-injector)** | Generic root injector for Unity games on rooted Android (arm64) | ⭐ 0 |
+| **[nama-repo](https://github.com/hozin-king/nama-repo)** | — | ⭐ 0 |
 <!-- PROJECTS:END -->
 
 ---
