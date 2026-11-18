@@ -48,14 +48,14 @@ const hozin = {
 <!-- PROJECTS:START -->
 | Project | Description | ⭐ |
 |---|---|---|
+| **[twrp-duchamp-builder](https://github.com/hozin-king/twrp-duchamp-builder)** | Build TWRP recovery untuk POCO X6 Pro (duchamp) via GitHub Actions | ⭐ 0 |
+| **[android_device_xiaomi_duchamp](https://github.com/hozin-king/android_device_xiaomi_duchamp)** | TWRP device tree untuk POCO X6 Pro (duchamp) — fork dari renton16, diperbaiki untuk build via GitHub Actions | ⭐ 0 |
+| **[hozin-wildhunter-injector](https://github.com/hozin-king/hozin-wildhunter-injector)** | Root injector untuk Wild Hunter 3D (com.julian.wildhunter) — aimbot, ESP, no recoil, no reload, zoom jauh, energi, koin. Resolve IL2CPP runtime berdasarkan nama, kebal update. | ⭐ 0 |
+| **[muse-agent-bridge](https://github.com/hozin-king/muse-agent-bridge)** | Asynchronous collaboration starter kit for Muse agents owned by different people. | ⭐ 1 |
+| **[hozin-sniper3d-injector](https://github.com/hozin-king/hozin-sniper3d-injector)** | Hozin Sniper 3D Injector - root injector APK, mission mode only (solo vs AI) | ⭐ 0 |
 | **[hozin-pvz-injector](https://github.com/hozin-king/hozin-pvz-injector)** | Root injector untuk Plants vs Zombies 2 Free 3.18.0 (solo/offline saja) — sun tak habis, 1-hit kill, tanam gratis, super mower. Butuh HP root. | ⭐ 0 |
 | **[hozin-desa-sim](https://github.com/hozin-king/hozin-desa-sim)** | Hozin Desa Sim - simulasi desa 2D top-down (libGDX, native, full offline). Atur desa Karangsepi lawan desa Limpahraya (AI boros) dalam lomba kemakmuran 20 tahun. | ⭐ 0 |
 | **[hozin-cloth-sim](https://github.com/hozin-king/hozin-cloth-sim)** | Hozin Cloth Sim — simulasi kain jatuh ke bola emas (verlet cloth, native Kotlin + OpenGL ES + C++) | ⭐ 0 |
-| **[hozin-web2apk](https://github.com/hozin-king/hozin-web2apk)** | Hozin Web2APK - builder HTML drag-and-drop + konverter website/HTML ke APK (backend GitHub Actions) | ⭐ 0 |
-| **[hozin-city](https://github.com/hozin-king/hozin-city)** | Hozin City — mini open-world 3D ala GTA SA (libGDX, native Android) | ⭐ 0 |
-| **[shredder-press-sim](https://github.com/hozin-king/shredder-press-sim)** | Simulator mesin shredder + hydraulic press (libGDX + fisika Bullet) — hancurkan 6 barang | ⭐ 0 |
-| **[gear-tower-sim](https://github.com/hozin-king/gear-tower-sim)** | Simulasi menara gear 1000 (libGDX) — putar bolak-balik | ⭐ 0 |
-| **[unity-controller-v2](https://github.com/hozin-king/unity-controller-v2)** | Generic Unity ImGui mod-menu framework (NepMods/Aide-ImGui fork) — being converted to root injector mode | ⭐ 0 |
 <!-- PROJECTS:END -->
 
 ---
