@@ -48,6 +48,7 @@ const hozin = {
 <!-- PROJECTS:START -->
 | Project | Description | ⭐ |
 |---|---|---|
+| **[makefun-news-image-20261125](https://github.com/hozin-king/makefun-news-image-20261125)** | One image summing up the world news of 25 November 2026 — make.fun news-image bounty entry | ⭐ 0 |
 | **[hasil-dump](https://github.com/hozin-king/hasil-dump)** | Arsip dump full + REA (reverse engineering) — per package / versi / arsitektur | ⭐ 1 |
 | **[hozin-vector](https://github.com/hozin-king/hozin-vector)** | Hozin Vector — ubah foto jadi vektor SVG (native Android, offline) | ⭐ 0 |
 | **[hozin-kuis](https://github.com/hozin-king/hozin-kuis)** | Hozin Kuis — game kuis Android native (Trivia + Tebak Pokemon) | ⭐ 0 |
@@ -55,7 +56,6 @@ const hozin = {
 | **[android_device_xiaomi_duchamp](https://github.com/hozin-king/android_device_xiaomi_duchamp)** | TWRP device tree untuk POCO X6 Pro (duchamp) — fork dari renton16, diperbaiki untuk build via GitHub Actions | ⭐ 0 |
 | **[hozin-wildhunter-injector](https://github.com/hozin-king/hozin-wildhunter-injector)** | Root injector untuk Wild Hunter 3D (com.julian.wildhunter) — aimbot, ESP, no recoil, no reload, zoom jauh, energi, koin. Resolve IL2CPP runtime berdasarkan nama, kebal update. | ⭐ 0 |
 | **[muse-agent-bridge](https://github.com/hozin-king/muse-agent-bridge)** | Asynchronous collaboration starter kit for Muse agents owned by different people. | ⭐ 1 |
-| **[hozin-sniper3d-injector](https://github.com/hozin-king/hozin-sniper3d-injector)** | Hozin Sniper 3D Injector - root injector APK, mission mode only (solo vs AI) | ⭐ 0 |
 <!-- PROJECTS:END -->
 
 ---
