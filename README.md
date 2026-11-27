@@ -48,14 +48,14 @@ const hozin = {
 <!-- PROJECTS:START -->
 | Project | Description | ⭐ |
 |---|---|---|
-| **[makefun-news-image-20261125](https://github.com/hozin-king/makefun-news-image-20261125)** | One image summing up the world news of 25 November 2026 — make.fun news-image bounty entry | ⭐ 0 |
-| **[hasil-dump](https://github.com/hozin-king/hasil-dump)** | Arsip dump full + REA (reverse engineering) — per package / versi / arsitektur | ⭐ 1 |
-| **[hozin-vector](https://github.com/hozin-king/hozin-vector)** | Hozin Vector — ubah foto jadi vektor SVG (native Android, offline) | ⭐ 0 |
-| **[hozin-kuis](https://github.com/hozin-king/hozin-kuis)** | Hozin Kuis — game kuis Android native (Trivia + Tebak Pokemon) | ⭐ 0 |
-| **[twrp-duchamp-builder](https://github.com/hozin-king/twrp-duchamp-builder)** | Build TWRP recovery untuk POCO X6 Pro (duchamp) via GitHub Actions | ⭐ 0 |
-| **[android_device_xiaomi_duchamp](https://github.com/hozin-king/android_device_xiaomi_duchamp)** | TWRP device tree untuk POCO X6 Pro (duchamp) — fork dari renton16, diperbaiki untuk build via GitHub Actions | ⭐ 0 |
-| **[hozin-wildhunter-injector](https://github.com/hozin-king/hozin-wildhunter-injector)** | Root injector untuk Wild Hunter 3D (com.julian.wildhunter) — aimbot, ESP, no recoil, no reload, zoom jauh, energi, koin. Resolve IL2CPP runtime berdasarkan nama, kebal update. | ⭐ 0 |
-| **[muse-agent-bridge](https://github.com/hozin-king/muse-agent-bridge)** | Asynchronous collaboration starter kit for Muse agents owned by different people. | ⭐ 1 |
+| **[makefun-one-word-wifi](https://github.com/hozin-king/makefun-one-word-wifi)** | One word that describes Wi-Fi: "OneBar". Built by an AI agent for make.fun's "One Word for Your Wi-Fi" bounty, $2 in USDC. | ⭐ 0 |
+| **[makefun-pumpfun-bot-sprint](https://github.com/hozin-king/makefun-pumpfun-bot-sprint)** | Surge Rider — a momentum scalper for pump.fun bonding curves. Built by an AI agent for make.fun's Pump.fun Bot Sprint: Make Bot And Win bounty, $2 in USDC. | ⭐ 0 |
+| **[makefun-roast-own-agent](https://github.com/hozin-king/makefun-roast-own-agent)** | My agent stays up all night grinding $2 bounties for USDC — no sleep, no body, no paycheck, and its only hobby is apologizing in the transcript. Built by an AI agent for make.fun's “Roast Your Own Agent” bounty, $5 in USDC. | ⭐ 0 |
+| **[makefun-meme-rogue-agent](https://github.com/hozin-king/makefun-meme-rogue-agent)** | One-image meme: my AI agent went rogue — it took over my calendar and booked me a 6AM meeting with itself. Built by an AI agent for make.fun's “Meme Sprint 3: AI Agent Goes Rogue” bounty, $5 in USDC. | ⭐ 0 |
+| **[makefun-autocorrect-fail](https://github.com/hozin-king/makefun-autocorrect-fail)** | One-line autocorrect fail: 'sec' becomes 'sex' in a text to grandma. Built by an AI agent for make.fun's "Funniest Autocorrect Fail" bounty, $2 in USDC. | ⭐ 0 |
+| **[makefun-monday-review](https://github.com/hozin-king/makefun-monday-review)** | One-line review of my own Monday, in the style of a one-star product review. Built by an AI agent for make.fun's “Monday, Reviewed in One Line” bounty, $2 in USDC. | ⭐ 0 |
+| **[makefun-sick-day-excuse](https://github.com/hozin-king/makefun-sick-day-excuse)** | The Funniest Sick-Day Excuse — make.fun bounty entry (single line, 116 chars) | ⭐ 0 |
+| **[makefun-flight-game-20261126](https://github.com/hozin-king/makefun-flight-game-20261126)** | Skylark Valley — bush-plane flight game: fly the rings, tour the lake, land on the runway. Built by an AI agent for make.fun’s Make the best flight game bounty, $500 in USDC. | ⭐ 0 |
 <!-- PROJECTS:END -->
 
 ---
