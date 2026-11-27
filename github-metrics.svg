@@ -2,7 +2,48 @@
     <defs>
         <style/>
     </defs>
-    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}h1,h2,h3{margin:8px 0 2px;padding:0;color:#0366d6}h1{font-size:20px;font-weight:700}h2,h3{font-weight:400}h1 svg,h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.field.error{color:#cb2431}.field.error svg{fill:#cb2431}.row{display:flex}.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}#metrics-end,.fill-width{width:100%}.avatar{border-radius:50%;margin:0 6px}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,35,.04);outline-offset:-1px}svg.bar{margin:4px 0}.field.language{margin:0 8px;flex-grow:0}.field.language.details{display:flex;justify-content:space-between}.field.language.details small,.field.license.details small{display:flex;justify-content:space-between;color:#666;text-align:right}.field.language.details small&gt;*,.field.language.details&gt;*{flex:1 1 0}.field.language.details small&gt;:not(:last-child){margin-right:6px}footer{margin-top:8px;font-size:10px;font-style:italic;color:#666;text-align:right;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4px}.categories,.category{display:flex;align-items:center}.categories{justify-content:space-around;margin-top:4px}.category{flex-direction:column;flex:1 1 0}.gauge{stroke-linecap:round;fill:none}.gauge.info{color:#58a6ff}.gauge-base{stroke:currentColor;stroke-width:10;stroke-opacity:.2}.gauge text{fill:currentColor;font-size:40px;font-family:monospace;text-anchor:middle;font-weight:600}.activity{margin-bottom:12px}.activity .field{width:100%;overflow:hidden;text-overflow:ellipsis;max-width:450px;white-space:nowrap;margin-bottom:0}.activity .issue{display:inline;color:#58a6ff}.activity .user{font-weight:600}.activity .details{padding-left:38px;display:flex;flex-direction:column;font-size:13px;color:#666}svg.calendar{margin-left:13px;margin-top:4px}svg.calendar text{font-size:18px;fill:currentColor}.people{padding:0 10px}.people .avatar{margin:0 2px}.field.license.details{display:flex;justify-content:space-between}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}</style>
+    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}h1,h2,h3{margin:8px 0 2px;padding:0;color:#0366d6}h1{font-size:20px;font-weight:700}h2,h3{font-weight:400}h1 svg,h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.field.error{color:#cb2431}.field.error svg{fill:#cb2431}.row{display:flex}.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}#metrics-end,.fill-width{width:100%}.avatar{border-radius:50%;margin:0 6px}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,35,.04);outline-offset:-1px}svg.bar{margin:4px 0}.field.language{margin:0 8px;flex-grow:0}.field.language.details{display:flex;justify-content:space-between}.field.language.details small,.field.license.details small{display:flex;justify-content:space-between;color:#666;text-align:right}.field.language.details small&gt;*,.field.language.details&gt;*{flex:1 1 0}.field.language.details small&gt;:not(:last-child){margin-right:6px}footer{margin-top:8px;font-size:10px;font-style:italic;color:#666;text-align:right;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4px}.categories,.category{display:flex;align-items:center}.categories{justify-content:space-around;margin-top:4px}.category{flex-direction:column;flex:1 1 0}.gauge{stroke-linecap:round;fill:none}.gauge.info{color:#58a6ff}.gauge-base{stroke:currentColor;stroke-width:10;stroke-opacity:.2}.gauge text{fill:currentColor;font-size:40px;font-family:monospace;text-anchor:middle;font-weight:600}.activity{margin-bottom:12px}.activity .field{width:100%;overflow:hidden;text-overflow:ellipsis;max-width:450px;white-space:nowrap;margin-bottom:0}.activity .issue{display:inline;color:#58a6ff}.activity .user{font-weight:600}.activity .details{padding-left:38px;display:flex;flex-direction:column;font-size:13px;color:#666}svg.calendar{margin-left:13px;margin-top:4px}svg.calendar text{font-size:18px;fill:currentColor}.people{padding:0 10px}.people .avatar{margin:0 2px}.field.license.details{display:flex;justify-content:space-between}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}
+
+/* glass-reactions v2 */
+/* iOS frosted-glass reaction orbs — transform/opacity animation only */
+.categories .category{position:relative}
+.categories .category .glass-aura{position:absolute;left:50%;top:50%;width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;z-index:0;pointer-events:none;filter:blur(7px);opacity:.5;animation:glass-aura 4s ease-in-out infinite;
+  background:radial-gradient(circle at 35% 30%,rgba(0,240,255,.7),rgba(255,0,229,.42) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(2) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(255,0,229,.65),rgba(0,120,255,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(3) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(0,120,255,.65),rgba(0,230,118,.45) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(4) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(0,230,118,.65),rgba(255,234,0,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(5) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(255,234,0,.65),rgba(255,145,0,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(6) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(255,145,0,.65),rgba(255,61,0,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(7) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(255,61,0,.65),rgba(168,85,247,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(8) .glass-aura{background:radial-gradient(circle at 35% 30%,rgba(168,85,247,.65),rgba(0,240,255,.5) 55%,rgba(0,0,0,0) 72%)}
+.categories .category:nth-child(1) .glass-aura{animation-delay:0s}
+.categories .category:nth-child(2) .glass-aura{animation-delay:.5s}
+.categories .category:nth-child(3) .glass-aura{animation-delay:1s}
+.categories .category:nth-child(4) .glass-aura{animation-delay:1.5s}
+.categories .category:nth-child(5) .glass-aura{animation-delay:2s}
+.categories .category:nth-child(6) .glass-aura{animation-delay:2.5s}
+.categories .category:nth-child(7) .glass-aura{animation-delay:3s}
+.categories .category:nth-child(8) .glass-aura{animation-delay:3.5s}
+.categories .category svg.gauge{position:relative;z-index:1;width:54px;height:54px;border-radius:50%;
+  background:linear-gradient(160deg,rgba(255,255,255,.15),rgba(255,255,255,.02) 55%,rgba(255,255,255,.08));
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:0 8px 24px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -8px 14px rgba(255,255,255,.05),inset 1px 0 4px rgba(255,255,255,.12);
+  backdrop-filter:blur(8px) saturate(1.7);-webkit-backdrop-filter:blur(8px) saturate(1.7);
+  will-change:transform;animation:glass-float 3.4s ease-in-out infinite}
+.categories .category:nth-child(1) svg.gauge{animation-delay:0s}
+.categories .category:nth-child(2) svg.gauge{animation-delay:.3s}
+.categories .category:nth-child(3) svg.gauge{animation-delay:.6s}
+.categories .category:nth-child(4) svg.gauge{animation-delay:.9s}
+.categories .category:nth-child(5) svg.gauge{animation-delay:1.2s}
+.categories .category:nth-child(6) svg.gauge{animation-delay:1.5s}
+.categories .category:nth-child(7) svg.gauge{animation-delay:1.8s}
+.categories .category:nth-child(8) svg.gauge{animation-delay:2.1s}
+.categories .gauge-base{fill:rgba(255,255,255,.04);stroke:rgba(255,255,255,.55);stroke-width:5}
+.categories .gauge text{filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}
+@keyframes glass-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes glass-aura{0%,100%{opacity:.45}50%{opacity:.75}}
+/* /glass-reactions */
+</style>
     <style/>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
@@ -1334,51 +1375,51 @@
                     <section>
                         <div class="row fill-width">
                             <section class="categories">
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">❤️</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">👍</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">👎</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">😄</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">😕</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">👀</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">🚀</text>
                                     </svg>
                                 </div>
-                                <div class="category column">
+                                <div class="category column"><span class="glass-aura"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge info">
-                                        <circle class="gauge-base" r="53" cx="60" cy="60"/>
+                                        <circle class="gauge-base" r="53" cx="60" cy="60"/><ellipse cx="42" cy="38" rx="26" ry="13" fill="#ffffff" opacity="0.18" transform="rotate(-25 42 38)"><animate attributeName="opacity" values="0.18;0.08;0.18" dur="3.4s" repeatCount="indefinite"/></ellipse>
                                         <text x="60" y="60" dominant-baseline="central">🎉</text>
                                     </svg>
                                 </div>
